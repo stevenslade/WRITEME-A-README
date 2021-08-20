@@ -2,8 +2,7 @@ const inquirer = require('inquirer');
 
 const fs = require('fs');
 
-
-//const { title } = require('process');
+const generateMarkdown = require('./utils/generateMarkdown');
 
 inquirer
   .prompt([
@@ -44,25 +43,30 @@ inquirer
       err ? console.log(err) : console.log('Successfully created README.md!')
     );
 
-  });
+});
 
 
   const createReadme = (answers) =>
  ` # ${answers.projectName}
 
+ ## A Badge Maybe?
+
+ [![npm](https://badge.fury.io/js/inquirer.svg)](http://badge.fury.io/js/inquirer)
+
+ ## Table of Contents
+
+ [Installation](#installation)
+ 
+ [Usage](#usage)
+
  ## Description
 
  * ${answers.projectDesc}
 
- ## Table of Contents - with jump links
-
- * [Installation](#installation)
-
-
 
 ## <a id="installation"></a>Installation
 
-## Usage
+## <a id="usage"></a>Usage
 
 ## License
 
@@ -77,7 +81,5 @@ inquirer
 * If you have any questions send me an email at ${answers.email}
 
 * If you would like to visit my github profile https://github.com/${answers.gitHubUserName}
-
-
-* [link](#head1234)`
-  ;
+`
+ ;
