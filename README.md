@@ -1,32 +1,49 @@
- # wegrwg
+ # Warhawk
 
- ## A Badge Maybe?
+ [![npm](https://badge.fury.io/js/inquirer.svg)](http://badge.fury.io/js/inquirer)
 
  ## Table of Contents
+
+ [Description](#description)
 
  [Installation](#installation)
  
  [Usage](#usage)
 
- ## Description
+ [License](#license)
 
- * wergegw
+ [Contributing](#contributing)
+
+ [Collaborators](#collaborators)
+
+ [Tests](#tests)
+
+ [Questions](#questions)
+
+
+ ## <a id="description"></a>Description
+
+ * making the ultimate battle bot control system
 
 
 ## <a id="installation"></a>Installation
 
+ * Run the following to install dependancies npm i
+
 ## <a id="usage"></a>Usage
 
-## License
+## <a id="license"></a>License
 
 * MIT
 
-## Contributing
+## <a id="contributing"></a>Contributing
 
-## Tests
+## <a id="collaborators"></a>Collaborators
 
-## Questions
+## <a id="tests"></a>Tests
 
-* If you have any questions send me an email at qweqw
+## <a id="questions"></a>Questions
 
-* If you would like to visit my github profile https://github.com/qgqergegr
+* If you have any questions send me an email at wfwef
+
+* If you would like to visit my github profile https://github.com/kmm

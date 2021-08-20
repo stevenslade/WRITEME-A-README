@@ -17,6 +17,36 @@ inquirer
       message: 'Please enter a description of your project',
     },
     {
+      type: 'input',
+      name: 'dependancies',
+      message: 'What command should be run to install dependancies',
+    },
+    {
+      type: 'input',
+      name: 'tests',
+      message: 'What command should be run to install tests',
+    },
+    {
+      type: 'list',
+      name: 'license',
+      message: ' your license type',
+      choices: ["MIT", 'APACHE 2.0', 'GPL 3.0', 'BSD 3.0', 'None'],
+    },
+    {
+        type: 'input',
+        name: 'usage',
+        message: 'What does the user need to know about using the repo?',
+      },
+      {
+        type: 'input',
+        name: 'contributing',
+        message: 'What does the user need to know about contributing to the repo?',
+      },
+      {
+        type: 'input',
+        name: 'contributors',
+        message: 'Please credit any collaborators on this project',
+      }, {
         type: 'input',
         name: 'gitHubUserName',
         message: 'Please enter your git hub user name',
@@ -25,12 +55,6 @@ inquirer
         type: 'input',
         name: 'email',
         message: 'Please enter your email address',
-      },
-    {
-        type: 'list',
-        name: 'license',
-        message: 'Enter your license type',
-        choices: ["MIT", 'APACHE 2.0', 'GPL 3.0', 'BSD 3.0', 'None'],
       },
 
   ])
@@ -49,34 +73,49 @@ inquirer
   const createReadme = (answers) =>
  ` # ${answers.projectName}
 
- ## A Badge Maybe?
-
  [![npm](https://badge.fury.io/js/inquirer.svg)](http://badge.fury.io/js/inquirer)
 
  ## Table of Contents
+
+ [Description](#description)
 
  [Installation](#installation)
  
  [Usage](#usage)
 
- ## Description
+ [License](#license)
+
+ [Contributing](#contributing)
+
+ [Collaborators](#collaborators)
+
+ [Tests](#tests)
+
+ [Questions](#questions)
+
+
+ ## <a id="description"></a>Description
 
  * ${answers.projectDesc}
 
 
 ## <a id="installation"></a>Installation
 
+ * Run the following to install dependancies ${answers.dependancies}
+
 ## <a id="usage"></a>Usage
 
-## License
+## <a id="license"></a>License
 
 * ${answers.license}
 
-## Contributing
+## <a id="contributing"></a>Contributing
 
-## Tests
+## <a id="collaborators"></a>Collaborators
 
-## Questions
+## <a id="tests"></a>Tests
+
+## <a id="questions"></a>Questions
 
 * If you have any questions send me an email at ${answers.email}
 
