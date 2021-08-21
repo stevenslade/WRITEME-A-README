@@ -1,6 +1,8 @@
- # Warhawk
+ # rthre
 
- [![npm](https://badge.fury.io/js/inquirer.svg)](http://badge.fury.io/js/inquirer)
+
+ [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 
  ## Table of Contents
 
@@ -23,14 +25,16 @@
 
  ## <a id="description"></a>Description
 
- * making the ultimate battle bot control system
+ * brwethr
 
 
 ## <a id="installation"></a>Installation
 
- * Run the following to install dependancies npm i
+ * Run the following to install dependancies brtwrt
 
 ## <a id="usage"></a>Usage
+
+* brwtr
 
 ## <a id="license"></a>License
 
@@ -38,12 +42,18 @@
 
 ## <a id="contributing"></a>Contributing
 
+* bwrt
+
 ## <a id="collaborators"></a>Collaborators
+
+* byjtyej
 
 ## <a id="tests"></a>Tests
 
+* wrtbb
+
 ## <a id="questions"></a>Questions
 
-* If you have any questions send me an email at wfwef
+* If you have any questions send me an email at qrgeg
 
-* If you would like to visit my github profile https://github.com/kmm
+* If you would like to visit my github profile https://github.com/wergqer

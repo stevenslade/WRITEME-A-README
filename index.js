@@ -73,7 +73,9 @@ inquirer
   const createReadme = (answers) =>
  ` # ${answers.projectName}
 
- [![npm](https://badge.fury.io/js/inquirer.svg)](http://badge.fury.io/js/inquirer)
+
+ [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 
  ## Table of Contents
 
@@ -105,15 +107,23 @@ inquirer
 
 ## <a id="usage"></a>Usage
 
+* ${answers.usage}
+
 ## <a id="license"></a>License
 
 * ${answers.license}
 
 ## <a id="contributing"></a>Contributing
 
+* ${answers.contributing}
+
 ## <a id="collaborators"></a>Collaborators
 
+* ${answers.contributors}
+
 ## <a id="tests"></a>Tests
+
+* ${answers.tests}
 
 ## <a id="questions"></a>Questions
 
