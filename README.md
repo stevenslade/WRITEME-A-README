@@ -1,4 +1,4 @@
- # rthre
+ # g
 
 
  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -25,16 +25,16 @@
 
  ## <a id="description"></a>Description
 
- * brwethr
+ * g
 
 
 ## <a id="installation"></a>Installation
 
- * Run the following to install dependancies brtwrt
+ * Run the following to install dependancies g
 
 ## <a id="usage"></a>Usage
 
-* brwtr
+* 
 
 ## <a id="license"></a>License
 
@@ -42,18 +42,18 @@
 
 ## <a id="contributing"></a>Contributing
 
-* bwrt
+* g
 
 ## <a id="collaborators"></a>Collaborators
 
-* byjtyej
+* g
 
 ## <a id="tests"></a>Tests
 
-* wrtbb
+* npm test
 
 ## <a id="questions"></a>Questions
 
-* If you have any questions send me an email at qrgeg
+* If you have any questions send me an email at g
 
-* If you would like to visit my github profile https://github.com/wergqer
+* If you would like to visit my github profile https://github.com/g

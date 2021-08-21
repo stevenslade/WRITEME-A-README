@@ -20,11 +20,13 @@ inquirer
       type: 'input',
       name: 'dependancies',
       message: 'What command should be run to install dependancies',
+      default: 'npm i'
     },
     {
       type: 'input',
       name: 'tests',
       message: 'What command should be run to install tests',
+      default: 'npm test',
     },
     {
       type: 'list',
@@ -61,6 +63,13 @@ inquirer
   .then((answers) => {
     console.log("answers: ", answers);
 
+    //if answers.license = 'none', then return an empty line
+
+    //const badgeColorsAdress = function badgecolors(answers.license);  //this needs to make the entire address, because "none"
+
+    //const badgeLinkAdress = function badgeLink(answers.license);  //this needs to make the entire address not just pick MIT
+
+    //then add badgeColors and badgeLink to the function parameters called below
     const readMePageContent = createReadme(answers);
 
     fs.writeFile('README.md', readMePageContent, (err) =>
@@ -75,6 +84,12 @@ inquirer
 
 
  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+ [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+
+ [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)
+
+ [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 
 
  ## Table of Contents
