@@ -1,9 +1,10 @@
+//inquirer is required as it is used to collect user input
 const inquirer = require('inquirer');
 
-//const fs = require('fs');
-
+// the generateMarkdown file is required as it will generate the markdown file
 const generateMarkdown = require('./utils/generateMarkdown.js');
 
+//inquirer is used to collect uses responses
 inquirer
   .prompt([
     {
@@ -61,78 +62,7 @@ inquirer
 
   ])
   .then((answers) => {
-    //comment out the call for the license and instead just run generateMarkdown 
-    //const licenseSection = generateMarkdown.generateMarkdown(answers);
+    // generateMarkdown function is available in the generateMarkdown.js file
     generateMarkdown.generateMarkdown(answers);
 
-
-    //const readMePageContent = createReadme(answers, licenseSection);
-
-    // fs.writeFile('README.md', readMePageContent, (err) =>
-    //   err ? console.log(err) : console.log('Successfully created README.md!')
-    // );
-
 });
-
-
-//   const createReadme = (answers, licenseSection) =>
-//  ` # ${answers.projectName}
-
-//  ${licenseSection}
-
-//  ## Table of Contents
-
-//  1. [Description](#description)
-
-//  1. [Installation](#installation)
- 
-//  1. [Usage](#usage)
-
-//  1. [License](#license)
-
-//  1. [Contributing](#contributing)
-
-//  1. [Collaborators](#collaborators)
-
-//  1. [Tests](#tests)
-
-//  1. [Questions](#questions)
-
-
-//  ## <a id="description"></a>Description
-
-//  * ${answers.projectDesc}
-
-
-// ## <a id="installation"></a>Installation
-
-//  * Run the following to install dependancies 
-// > ${answers.dependancies}
-
-// ## <a id="usage"></a>Usage
-
-// * ${answers.usage}
-
-// ## <a id="license"></a>License
-
-// * ${answers.license}
-
-// ## <a id="contributing"></a>Contributing
-
-// * ${answers.contributing}
-
-// ## <a id="collaborators"></a>Collaborators
-
-// * ${answers.contributors}
-
-// ## <a id="tests"></a>Tests
-
-// > ${answers.tests}
-
-// ## <a id="questions"></a>Questions
-
-// * If you have any questions send me an email at ${answers.email}
-
-// * If you would like to visit my github profile https://github.com/${answers.gitHubUserName}
-// `
-//  ;

@@ -1,9 +1,13 @@
+//fs is required to generate a file
 const fs = require('fs');
+
+//the renderLicenseSection function uses a switch case to return the line for displaying a badge and link 
+//on the markdown file.  The switch case was a good partnership with list input used by inquirer
+//as the user is limited in available inputs
 
 function renderLicenseSection(license) {
  switch(license) {
     case 'MIT':
-      console.log('switchLicense:', license);
       return('[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)');
       break;
     case 'APACHE 2.0':
@@ -21,12 +25,9 @@ function renderLicenseSection(license) {
   }
 }
 
-// TODO: Create a function to generate markdown for README
+// function to generate markdown for README
 function generateMarkdown(data) {
   const licenseSection = renderLicenseSection(data.license);
-
-  //comment out the return as I'm going to make the markdonw file in here
- //return licenseSection;
 
 //This const is the readme content
  const readMePageContent = createReadme(data, licenseSection);
@@ -36,7 +37,6 @@ function generateMarkdown(data) {
      err ? console.log(err) : console.log('Successfully created README.md!')
    );
  
-
 }
 
 const createReadme = (data, licenseSection) =>
@@ -102,6 +102,7 @@ ${licenseSection}
 `
 ;
 
+//module.exports makes the included content available to other files
 module.exports = {
   generateMarkdown
 };

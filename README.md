@@ -23,7 +23,7 @@
 
 ## <a id="description"></a>Description
 
-* This node.js application allows the user to generate a README markdown file from user input.
+* This node.js application will generate a README file based on user input to prompts.
 
 
 ## <a id="installation"></a>Installation
@@ -38,7 +38,7 @@
 
 ## <a id="usage"></a>Usage
 
-* The repo can be forked for use.
+* Forking the repo and running the install is sufficient to use the application
 
 ## <a id="license"></a>License
 
@@ -46,7 +46,7 @@
 
 ## <a id="contributing"></a>Contributing
 
-* The project is not looking for contributions at the current time.
+* Project is complete, no contributions are necessary at the time
 
 ## <a id="collaborators"></a>Collaborators
 
