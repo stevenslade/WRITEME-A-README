@@ -62,6 +62,8 @@ ${licenseSection}
 
 1. [Questions](#questions)
 
+1. [Misc](#miscellaneous)
+
 
 ## <a id="description"></a>Description
 
@@ -98,7 +100,9 @@ ${licenseSection}
 
 * If you have any questions send me an email at ${data.email}
 
-* If you would like to visit my github profile https://github.com/${data.gitHubUserName}
+* If you would like to visit my github profile [Github Profile](https://github.com/${data.gitHubUserName})
+
+## <a id="miscellaneous"></a>Miscellaneous
 `
 ;
 
