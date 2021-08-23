@@ -2,7 +2,7 @@ const inquirer = require('inquirer');
 
 const fs = require('fs');
 
-const generateMarkdown = require('./utils/generateMarkdown');
+const generateMarkdown = require('./utils/generateMarkdown.js');
 
 inquirer
   .prompt([
@@ -61,16 +61,11 @@ inquirer
 
   ])
   .then((answers) => {
-    console.log("answers: ", answers);
+    //console.log("answers: ", answers);
 
-    //if answers.license = 'none', then return an empty line
+    const licenseSection = generateMarkdown.generateMarkdown(answers);
 
-    //const badgeColorsAdress = function badgecolors(answers.license);  //this needs to make the entire address, because "none"
-
-    //const badgeLinkAdress = function badgeLink(answers.license);  //this needs to make the entire address not just pick MIT
-
-    //then add badgeColors and badgeLink to the function parameters called below
-    const readMePageContent = createReadme(answers);
+    const readMePageContent = createReadme(answers, licenseSection);
 
     fs.writeFile('README.md', readMePageContent, (err) =>
       err ? console.log(err) : console.log('Successfully created README.md!')
@@ -79,36 +74,28 @@ inquirer
 });
 
 
-  const createReadme = (answers) =>
+  const createReadme = (answers, licenseSection) =>
  ` # ${answers.projectName}
 
-
- [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
- [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-
- [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)
-
- [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
-
+ ${licenseSection}
 
  ## Table of Contents
 
- [Description](#description)
+ 1. [Description](#description)
 
- [Installation](#installation)
+ 1. [Installation](#installation)
  
- [Usage](#usage)
+ 1. [Usage](#usage)
 
- [License](#license)
+ 1. [License](#license)
 
- [Contributing](#contributing)
+ 1. [Contributing](#contributing)
 
- [Collaborators](#collaborators)
+ 1. [Collaborators](#collaborators)
 
- [Tests](#tests)
+ 1. [Tests](#tests)
 
- [Questions](#questions)
+ 1. [Questions](#questions)
 
 
  ## <a id="description"></a>Description
@@ -118,7 +105,8 @@ inquirer
 
 ## <a id="installation"></a>Installation
 
- * Run the following to install dependancies ${answers.dependancies}
+ * Run the following to install dependancies 
+> ${answers.dependancies}
 
 ## <a id="usage"></a>Usage
 
@@ -138,7 +126,7 @@ inquirer
 
 ## <a id="tests"></a>Tests
 
-* ${answers.tests}
+> ${answers.tests}
 
 ## <a id="questions"></a>Questions
 
