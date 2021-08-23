@@ -1,6 +1,6 @@
 const inquirer = require('inquirer');
 
-const fs = require('fs');
+//const fs = require('fs');
 
 const generateMarkdown = require('./utils/generateMarkdown.js');
 
@@ -61,77 +61,78 @@ inquirer
 
   ])
   .then((answers) => {
-    //console.log("answers: ", answers);
+    //comment out the call for the license and instead just run generateMarkdown 
+    //const licenseSection = generateMarkdown.generateMarkdown(answers);
+    generateMarkdown.generateMarkdown(answers);
 
-    const licenseSection = generateMarkdown.generateMarkdown(answers);
 
-    const readMePageContent = createReadme(answers, licenseSection);
+    //const readMePageContent = createReadme(answers, licenseSection);
 
-    fs.writeFile('README.md', readMePageContent, (err) =>
-      err ? console.log(err) : console.log('Successfully created README.md!')
-    );
+    // fs.writeFile('README.md', readMePageContent, (err) =>
+    //   err ? console.log(err) : console.log('Successfully created README.md!')
+    // );
 
 });
 
 
-  const createReadme = (answers, licenseSection) =>
- ` # ${answers.projectName}
+//   const createReadme = (answers, licenseSection) =>
+//  ` # ${answers.projectName}
 
- ${licenseSection}
+//  ${licenseSection}
 
- ## Table of Contents
+//  ## Table of Contents
 
- 1. [Description](#description)
+//  1. [Description](#description)
 
- 1. [Installation](#installation)
+//  1. [Installation](#installation)
  
- 1. [Usage](#usage)
+//  1. [Usage](#usage)
 
- 1. [License](#license)
+//  1. [License](#license)
 
- 1. [Contributing](#contributing)
+//  1. [Contributing](#contributing)
 
- 1. [Collaborators](#collaborators)
+//  1. [Collaborators](#collaborators)
 
- 1. [Tests](#tests)
+//  1. [Tests](#tests)
 
- 1. [Questions](#questions)
-
-
- ## <a id="description"></a>Description
-
- * ${answers.projectDesc}
+//  1. [Questions](#questions)
 
 
-## <a id="installation"></a>Installation
+//  ## <a id="description"></a>Description
 
- * Run the following to install dependancies 
-> ${answers.dependancies}
+//  * ${answers.projectDesc}
 
-## <a id="usage"></a>Usage
 
-* ${answers.usage}
+// ## <a id="installation"></a>Installation
 
-## <a id="license"></a>License
+//  * Run the following to install dependancies 
+// > ${answers.dependancies}
 
-* ${answers.license}
+// ## <a id="usage"></a>Usage
 
-## <a id="contributing"></a>Contributing
+// * ${answers.usage}
 
-* ${answers.contributing}
+// ## <a id="license"></a>License
 
-## <a id="collaborators"></a>Collaborators
+// * ${answers.license}
 
-* ${answers.contributors}
+// ## <a id="contributing"></a>Contributing
 
-## <a id="tests"></a>Tests
+// * ${answers.contributing}
 
-> ${answers.tests}
+// ## <a id="collaborators"></a>Collaborators
 
-## <a id="questions"></a>Questions
+// * ${answers.contributors}
 
-* If you have any questions send me an email at ${answers.email}
+// ## <a id="tests"></a>Tests
 
-* If you would like to visit my github profile https://github.com/${answers.gitHubUserName}
-`
- ;
+// > ${answers.tests}
+
+// ## <a id="questions"></a>Questions
+
+// * If you have any questions send me an email at ${answers.email}
+
+// * If you would like to visit my github profile https://github.com/${answers.gitHubUserName}
+// `
+//  ;

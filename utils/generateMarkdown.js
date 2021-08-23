@@ -1,19 +1,5 @@
-//I DID NOT USE THE PROVIDED METHOD
-//Using the three functions to determine the the license code semed very repetitious
-//I gave the user choices with inquirer and since I know those options
-//I don't need to do a look up, I know the options they have and with a single switch statement 
-//I can get get the result I need and return it
+const fs = require('fs');
 
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-function renderLicenseBadge(license) {}
-
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {}
-
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
 function renderLicenseSection(license) {
  switch(license) {
     case 'MIT':
@@ -39,15 +25,82 @@ function renderLicenseSection(license) {
 function generateMarkdown(data) {
   const licenseSection = renderLicenseSection(data.license);
 
- return licenseSection;
+  //comment out the return as I'm going to make the markdonw file in here
+ //return licenseSection;
 
-  
-  //return `# ${data.title}
+//This const is the readme content
+ const readMePageContent = createReadme(data, licenseSection);
 
+ //This shouldd write the file
+   fs.writeFile('README.md', readMePageContent, (err) =>
+     err ? console.log(err) : console.log('Successfully created README.md!')
+   );
+ 
 
-  
-//`;
 }
+
+const createReadme = (data, licenseSection) =>
+` # ${data.projectName}
+
+${licenseSection}
+
+## Table of Contents
+
+1. [Description](#description)
+
+1. [Installation](#installation)
+
+1. [Usage](#usage)
+
+1. [License](#license)
+
+1. [Contributing](#contributing)
+
+1. [Collaborators](#collaborators)
+
+1. [Tests](#tests)
+
+1. [Questions](#questions)
+
+
+## <a id="description"></a>Description
+
+* ${data.projectDesc}
+
+
+## <a id="installation"></a>Installation
+
+* Run the following to install dependancies
+
+> ${data.dependancies}
+
+## <a id="tests"></a>Tests
+
+> ${data.tests}
+
+## <a id="usage"></a>Usage
+
+* ${data.usage}
+
+## <a id="license"></a>License
+
+* ${data.license}
+
+## <a id="contributing"></a>Contributing
+
+* ${data.contributing}
+
+## <a id="collaborators"></a>Collaborators
+
+* ${data.contributors}
+
+## <a id="questions"></a>Questions
+
+* If you have any questions send me an email at ${data.email}
+
+* If you would like to visit my github profile https://github.com/${data.gitHubUserName}
+`
+;
 
 module.exports = {
   generateMarkdown
